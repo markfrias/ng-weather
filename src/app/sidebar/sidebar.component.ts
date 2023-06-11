@@ -11,5 +11,6 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  items: any[] = [1, 2, 3]
 
 }
