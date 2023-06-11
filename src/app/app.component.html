@@ -1,4 +1,15 @@
 <div class="app">
-  <app-sidebar></app-sidebar>
-  <app-headline [weather]="weather"></app-headline>
+  <mat-sidenav-container>
+    <mat-sidenav opened mode="side">
+      <app-sidebar></app-sidebar>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="main-view">
+        <app-headline [weather]="weather"></app-headline>
+      </div>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
 </div>

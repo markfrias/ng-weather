@@ -7,3 +7,8 @@
     &nbsp;
     <span>L: {{weather?.daily.temperature_2m_min[0]}}</span>
 </div>
+
+<div *ngIf="!weather?.current_weather">
+    <mat-spinner [color]="'green'" ></mat-spinner>
+</div>
+

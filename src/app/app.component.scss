@@ -1,8 +1,24 @@
 * {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .app {
     display: flex;
     flex-direction: row;
 }
+
+mat-sidenav {
+    width: 30vw;
+}
+
+mat-sidenav-content {
+    width: 100%;
+}
+
+.mat-drawer-container {
+    width: 100%;
+}
+

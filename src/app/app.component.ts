@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   ){}
   title = 'weather-app';
   weather: any;
-  weatherSubscription: any;
+  weatherSubscription: Subscription = new Subscription();
 
   ngOnInit() {
     this.weatherSubscription = this.weatherService.getWeather().subscribe(
