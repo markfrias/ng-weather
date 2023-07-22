@@ -1,39 +1,42 @@
-.top, .bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.top,
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .top {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .sidebar-item {
-    background: peachpuff;
-    padding: 1rem;
-    border-radius: 10px;
+  background: peachpuff;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .item-h1 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
-.item-h2, .item-p {
-    font-size: .8rem;
-    margin-bottom: 0;
+.item-h2,
+.item-p {
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }
 
 .item-h2 {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .item-p {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .item-temp {
-    font-size: 2.5rem;
-    line-height: 100%;
+  font-size: 2.5rem;
+  line-height: 100%;
 }
