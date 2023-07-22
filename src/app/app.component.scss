@@ -12,11 +12,20 @@ mat-sidenav {
 }
 
 mat-sidenav-content {
-  width: 100%;
+  width: auto;
+  min-width: auto;
+  max-width: auto;
+  //overflow: hidden;
 }
 
 .mat-drawer-container {
   width: 100%;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
 }
 
 .mobile-sidenav {
