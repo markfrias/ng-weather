@@ -13,8 +13,11 @@ import { SearchBarComponent } from './shared/search-bar/search-bar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarItemComponent } from './sidebar/sidebar-item/sidebar-item.component';
-import {MatList, MatListModule} from '@angular/material/list'; 
-import {MatRippleModule} from '@angular/material/core'; 
+import { MatList, MatListModule } from '@angular/material/list';
+import { MatRippleModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -33,9 +36,12 @@ import {MatRippleModule} from '@angular/material/core';
     MatProgressSpinnerModule,
     MatSidenavModule,
     MatListModule,
-    MatRippleModule
+    MatRippleModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
   ],
   providers: [BasicWeatherService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
