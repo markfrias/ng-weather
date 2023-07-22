@@ -31,17 +31,22 @@ mat-sidenav-content {
   padding: 1em;
 }
 
-.mobile-sidenav {
+.mobile-sidenav,
+.mobile-search-bar {
   display: none;
 }
 
 @media only screen and (max-width: 600px) {
+  .app {
+    display: block;
+  }
   mat-sidenav-container {
     display: none;
   }
-  .mobile-sidenav {
-    display: block;
-    width: 100%;
+  .mobile-sidenav,
+  .mobile-search-bar {
+    display: flex;
     padding: 1em;
+    flex-direction: column;
   }
 }
