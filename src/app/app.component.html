@@ -8,11 +8,12 @@
       <div class="main-view">
         <app-headline [weather]="weather"></app-headline>
       </div>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Search" type="search" />
+        <mat-icon matIconPrefix>search</mat-icon>
+      </mat-form-field>
     </mat-sidenav-content>
-
   </mat-sidenav-container>
 
   <app-sidebar class="mobile-sidenav"></app-sidebar>
 </div>
-
-
