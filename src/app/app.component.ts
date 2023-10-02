@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { EMPTY, Observable, Subscription, catchError, tap } from 'rxjs';
+import { pipe } from 'rxjs';
 import { BasicWeatherService } from './basic/basic-weather.service';
 
 @Component({
@@ -7,20 +8,25 @@ import { BasicWeatherService } from './basic/basic-weather.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit{
   constructor(
     private weatherService: BasicWeatherService
   ){}
-  title = 'weather-app';
-  weather: any;
-  weatherSubscription: Subscription = new Subscription();
 
-  ngOnInit() {
-    this.weatherSubscription = this.weatherService.getWeather().subscribe(
-      (data) => this.weather = data )
+  ngOnInit(): void {
+    console.log(this.appDrawer)
   }
+  
+  @ViewChild('drawer') appDrawer: any;
+  title = 'weather-app';
+  showFiller = false;
+  weather$ = this.weatherService.weather$.pipe(
+    catchError((err) => EMPTY),
+    tap(data => console.log(data))
+  )
 
-  ngOnDestroy() {
-    this.weatherSubscription.unsubscribe();
+  toggleDrawer() {
+    this.appDrawer.toggle();
+    
   }
 }

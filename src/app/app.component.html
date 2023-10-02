@@ -1,18 +1,22 @@
 <div class="app">
   <mat-sidenav-container>
-    <mat-sidenav opened mode="side">
-      <app-sidebar></app-sidebar>
+    <mat-sidenav ngModel #drawer opened mode="side">
+      <app-sidebar [drawer]="drawer"></app-sidebar>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content class="content">
       <div class="top-bar">
-        <app-search-bar></app-search-bar>
+        <button type="button" mat-button (click)="toggleDrawer()" [ngClass]="{'hidden': drawer.opened}">Toggle sidenav</button>
+        <app-search-bar class="search-bar"></app-search-bar>
       </div>
       <div class="main-view">
-        <app-headline [weather]="weather"></app-headline>
+        <app-headline [weather]="weather$ | async"></app-headline>
       </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <app-search-bar class="mobile-search-bar"></app-search-bar>
-  <app-sidebar class="mobile-sidenav"></app-sidebar>
+ <!--
+<app-sidebar class="mobile-sidenav"></app-sidebar>
+
+ -->
+  
 </div>

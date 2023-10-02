@@ -1,3 +1,4 @@
+<button ngModel #toggleButton *ngIf="drawer.opened" type="button" mat-button (click)="drawer.toggle()">Toggle sidenav</button>
 <div *ngFor="let item of items">
     <app-sidebar-item></app-sidebar-item>
 </div>

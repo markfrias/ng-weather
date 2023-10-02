@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -12,5 +12,7 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
   items: any[] = [1, 2, 3]
+  @Input() drawer!: any;
+  @ViewChild('toggleButton') button!: ElementRef<any>; 
 
 }
